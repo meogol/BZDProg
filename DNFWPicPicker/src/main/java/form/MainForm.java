@@ -15,10 +15,13 @@ public class MainForm extends JFrame {
     private JPanel panel1;
     private JButton aboutButton;
     private JButton showButton;
+    private JPanel jpImage;
     public MainLogic mainLogic = new MainLogic();
 
     public MainForm(String title){
     super(title);
+
+    mainLogic.checkDir();
 
     setContentPane(panel1);
     getRootPane().setDefaultButton(showButton);
@@ -46,9 +49,9 @@ public class MainForm extends JFrame {
     }
     public void showRandomPic(){
         Image image = mainLogic.getRandomImage();
-        ImageIcon img = new ImageIcon(image);
-        JLabel imgLabel = new JLabel(img);
-        showMessageDialog(null, imgLabel);
+
+        jpImage.getGraphics().drawImage(image.getScaledInstance(jpImage.getWidth(), jpImage.getHeight(), 0),
+                0, 0,null);
     }
 
     public static void main(String[] args) {

@@ -51,7 +51,7 @@ public class MainLogic {
         }
     }
 
-    private boolean checkDir() {
+    public boolean checkDir() {
         if (!folder.exists())
             return folder.mkdir();
 
@@ -60,5 +60,5 @@ public class MainLogic {
 
 }
 
-    }
+
 
