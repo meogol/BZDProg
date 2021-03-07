@@ -10,8 +10,9 @@ public class UpdJPanel extends JPanel {
     @Override
     public void paintComponent(Graphics g){
         if(image == null) return;
-
-        g.drawImage(image, 0, 0, this);
+        g.drawImage(image.getScaledInstance(
+                this.getWidth(), this.getHeight(),0),
+                0, 0, this);
     }
 
     public void updateBuffer(BufferedImage image){

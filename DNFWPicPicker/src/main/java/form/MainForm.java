@@ -16,13 +16,16 @@ public class MainForm extends JFrame {
     private JButton aboutButton;
     private JButton showButton;
     private JPanel jpImage;
+    private UpdJPanel jpImages = new UpdJPanel();
+
     public MainLogic mainLogic = new MainLogic();
 
     public MainForm(String title){
     super(title);
 
     mainLogic.checkDir();
-
+    setBounds(300,100,800,600);
+    add(jpImages, BorderLayout.CENTER);
     setContentPane(panel1);
     getRootPane().setDefaultButton(showButton);
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -49,7 +52,7 @@ public class MainForm extends JFrame {
     }
     public void showRandomPic(){
         Image image = mainLogic.getRandomImage();
-
+jpImage.update(jpImage.getGraphics());
         jpImage.getGraphics().drawImage(image.getScaledInstance(jpImage.getWidth(), jpImage.getHeight(), 0),
                 0, 0,null);
     }
