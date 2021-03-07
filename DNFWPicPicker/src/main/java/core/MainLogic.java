@@ -2,13 +2,18 @@ package core;
 
 
 import javax.imageio.ImageIO;
+import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.Random;
 
 public class MainLogic {
     private   File folder = new File(System.getProperty("user.dir")+"\\img");
+
 
     public Image getImage(int id){
         if(!checkDir())
@@ -46,7 +51,7 @@ public class MainLogic {
         }
     }
 
-    private boolean checkDir() {
+    public boolean checkDir() {
         if (!folder.exists())
             return folder.mkdir();
 
@@ -54,3 +59,6 @@ public class MainLogic {
     }
 
 }
+
+
+
