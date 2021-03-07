@@ -8,7 +8,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.FileFilter;
 import java.io.IOException;
 import java.util.Random;
 
@@ -42,6 +41,7 @@ public class MainLogic {
         Random rand = new Random();
 
         if(listFiles == null) return null;
+        if(listFiles.length <=0) return null;
 
         try {
             return ImageIO.read(listFiles[rand.nextInt(listFiles.length)]);
