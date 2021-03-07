@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/BZDProg.iml" filepath="$PROJECT_DIR$/.idea/BZDProg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DNFWPicPicker/DNFWPicPicker.iml" filepath="$PROJECT_DIR$/DNFWPicPicker/DNFWPicPicker.iml" />
     </modules>
   </component>
 </project>
