@@ -4,7 +4,6 @@ package core;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.io.File;
-import java.io.FileFilter;
 import java.io.IOException;
 import java.util.Random;
 
@@ -37,6 +36,7 @@ public class MainLogic {
         Random rand = new Random();
 
         if(listFiles == null) return null;
+        if(listFiles.length <=0) return null;
 
         try {
             return ImageIO.read(listFiles[rand.nextInt(listFiles.length)]);
@@ -52,5 +52,5 @@ public class MainLogic {
 
         return true;
     }
-    
+
 }
