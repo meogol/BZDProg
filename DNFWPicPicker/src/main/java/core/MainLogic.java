@@ -33,7 +33,7 @@ public class MainLogic {
         return null;
     }
 
-    public Image getRandomImage(){
+    public BufferedImage getRandomImage(){
         if(!checkDir())
             return null;
 
