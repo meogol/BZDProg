@@ -26,6 +26,8 @@ public class NewForm  extends JFrame {
         add(aboutButton, BorderLayout.NORTH);
         add(showButton, BorderLayout.SOUTH);
 
+        mainLogic.checkDir();
+
         showButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
